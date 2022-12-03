@@ -50,8 +50,11 @@ class QuietApp extends ConsumerWidget {
         debugShowCheckedModeBanner: false,
         builder: (context, child) {
           return AppTheme(
+            // child: AppPlatformConfiguration(
+            //   child: CopyRightOverlay(child: child),
+            // ),
             child: AppPlatformConfiguration(
-              child: CopyRightOverlay(child: child),
+              child: child!,
             ),
           );
         },
